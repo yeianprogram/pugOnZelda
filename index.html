@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>
+            Pug in Zelda Map
+        </title>
+        <link rel="icon" type="image/gif" href="https://media.tenor.com/BH3AVKkqbU8AAAAM/pug.gif">
+    </head>
+    <body>
+        <script>
+            const sparky = document.createElement("img");
+            sparky.src = "https://github.com/javaBoysEL/assets/blob/main/pug.GIF?raw=true";
+            sparky.width = "50";
+            sparky.height = "50";
+            sparky.style.position = "fixed";
+            sparky.style.bottom = "530px";
+            sparky.style.left = "785px";
+            let y = 530; //sparky.bottom
+            let x = 785; //sparky.left
+            document.addEventListener("keydown", function(event) {
+                if (event.key === "ArrowRight") {
+                    x = x + 5;
+                    sparky.style.left = x + "px";
+                } else if (event.key === "ArrowLeft") {
+                    x = x - 5;
+                    sparky.style.left = x + "px";
+                } else if (event.key === "ArrowUp") {
+                    y = y + 5;
+                    sparky.style.bottom = y + "px";
+                } else if (event.key === "ArrowDown") {
+                    y = y - 5;
+                    sparky.style.bottom = y + "px";
+                }
+            });
+            document.body.appendChild(sparky);
+        </script>
+        <style>
+            body {
+                background-image: url('https://assetsio.gnwcdn.com/A-Link-to-the-Past-Map-Header1-05292020.jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp');
+            }
+        </style>
+    </body>
+</html>
